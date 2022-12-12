@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/style.css">
+	<title>Solar System</title>
+
+</head>
+<body class="w-full h-mobileHeight lg:h-height bg-heroImage bg-center flex flex-col items-center">
+	<header class="w-full">
+
+		<h1 class="text-white text-center font-bold mt-6 mb-16 text-4xl text-shadow-heading">Calculate a weight of an object on a planet</h1>
+		<div class="flex gap-3 justify-center mb-4">
+			<input type="text" id="massInput" placeholder="Mass in Kilogram" class="px-3 focus:outline-none"/>
+			<select id="select" class="rounded-[4px] px-4 text-neutral-400 font-bold text-lg focus:outline-none">
+				<option value='' class="semibold text-neutral-400 " selected disabled>--select planet-- </option>
+			</select>
+			<button id="btn-weight" class="bg-neutral-400 rounded-[4px] py-2 px-3 text-white font-semibold text-lg">Calculate weight</button>
+		</div>
+
+	</header>
+	<main class="w-full px-4 md:px-0 h-mobileHeight xl:h-height flex items-center lg:items-start pt-0 lg:pt-4">
+		
+		<div class="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[80%] mx-auto bg-[#ffffff20] py-16 px-0 flex gap-20 
+		lg:gap-0 flex-col lg:flex-row items-center lg:justify-around rounded">
+			<div id="planet-image-box" class="planet-image-box w-full md:w-[50%] lg:w-[30%] order-2 lg:order-1 aspect-square">
+				<img id="planet-image" src='./assets/earth.png' class="planet-image w-full" />
+			</div>
+
+			<div id="planet-text-div" class="w-full md:w-[50%] lg:w-[50%] py-6 bg-[#ffffff20] flex-col gap-4 items-center rounded text-white order-1 lg:order-2 hidden">
+				<p class="text-xl text-center mx-auto"><span id="planet-text"></span> <span id="planet-name" class="font-bold"></span></p>
+				<div id="circle-div" class="rounded-full px-2 flex aspect-square min-w-[100px] bg-[#ffffff20] justify-center items-center">
+					<p id="calculated-weight" class="font-bold text-xl"></p>
+				</div>
+			</div>
+		</div>
+		
+	</main>
+
+	<script src="./index.js"></script>
+</body>
+
+</html>
+
